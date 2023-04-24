@@ -33,6 +33,11 @@ min_python_version:
     help: What is the minimum python version?
     default: 3.8
 
+use_pytest_mpl:
+    type: bool
+    default: false
+    help: Do you want to use pytest_mpl?
+
 repository_provider:
   type: str
   help: Your repository provider

@@ -39,6 +39,11 @@ addopts = [
     "--cov-config=tests/coverage.conf",
     "--cov={{python_package_import_name}}",
     "--doctest-modules",
+    {% if use_pytest_mpl %}"--mpl",
+    "--mpl-generate-summary=html",
+    "--mpl-results-always",
+    "--mpl-baseline-path=tests/baseline",
+    "--mpl-results-path=build/htmldoc/tests/results",{% endif %}
 ]
 testpaths = [
     "tests/",
@@ -90,6 +95,7 @@ test = [
     "pytest-picked~=0.4.6",
     "pytest-sugar~=0.9.5",
     "pytest-html~=3.1.1",
+    {% if use_pytest_mpl %}"pytest-mpl~=0.16.1",{% endif %}
 ]
 
 [tool.pdm.scripts]
@@ -101,3 +107,4 @@ doc.shell = """\
     docstr-coverage {{python_package_import_name}} -miP -sp -is -idel --skip-file-doc --exclude ".*/kt.*.py" --badge=build/htmldoc/doc_badge.svg
     coverage-badge -f -o build/htmldoc/cov_badge.svg
 """
+{% if use_pytest_mpl %}baseline.shell = "pytest --mpl-generate-path=tests/baseline tests"{% endif %}

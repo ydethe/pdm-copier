@@ -1,4 +1,13 @@
 repos:
+  - repo: local
+    hooks:
+      # Prevent committing .rej files
+      - id: forbidden-files
+        name: forbidden files
+        entry: found Copier update rejection files; review them and remove them
+        language: fail
+        files: "\\.rej$"
+
   # Some "common" checks useful for almost any repo
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0

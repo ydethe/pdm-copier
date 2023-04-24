@@ -3,18 +3,10 @@ _subdirectory: project
 _skip_if_exists:
 - CHANGELOG.md
 - CREDITS.md
+_conflict: rej
 _tasks:
-    # Strings get executed under system's default shell
-    - "git init"
-    - "pdm venv create"
-    - "pdm use --venv in-project"
-    - "pdm install"
-    - ".venv/bin/pre-commit install"
-    - "git add --all"
-    - 'git commit -am "Initial commit"'
-    - "pdm run pytest"
-    - "pdm doc"
-
+    - ["{{ _copier_python }}", "{{ _copier_conf.src_path }}/task.py"]
+    
 # Questions
 project_name:
     type: str

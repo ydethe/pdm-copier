@@ -13,7 +13,7 @@ dependencies = [
     "rich>=13.3",
     "setuptools-scm>=7.1",
 ]
-requires-python = ">{{min_python_version}}="
+requires-python = ">{{min_python_version}}"
 
 [project.urls]
 "Bug Tracker" = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_namespace }}/issues"
@@ -28,7 +28,6 @@ max-line-length = 100
 
 [tool.black]
 line-length = 100
-target-version = ['py38']
 force-exclude = 'kt_.*.py'
 
 [tool.pytest.ini_options]

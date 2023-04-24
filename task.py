@@ -5,7 +5,7 @@ from pathlib import Path
 
 def run_command(cmd: List[str], check: bool = True):
     out = subprocess.run(cmd, stdout=subprocess.PIPE, check=check)
-    print(out.stdout)
+    print(out.stdout.decode('utf-8'))
 
 
 def initialize_git():

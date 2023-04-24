@@ -11,8 +11,11 @@ _tasks:
     - "pdm install"
     - ".venv/bin/pre-commit install"
     - "git add --all"
+    - 'git commit -am "Initial commit"'
+    - "pdm run pytest"
+    - "pdm doc"
 
-# questions
+# Questions
 project_name:
     type: str
     help: What is your project name?
@@ -51,6 +54,11 @@ python_package_import_name:
   type: str
   help: Your Python package import name (for `import NAME` in Python code)
   default: "{{ project_name|lower|replace('-', '_')|replace(' ', '_') }}"
+
+copyright_date:
+  type: str
+  help: The copyright date
+  default: "2023"
 
 copyright_license:
   type: str

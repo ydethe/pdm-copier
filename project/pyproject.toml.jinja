@@ -61,19 +61,27 @@ excludes = [
     "mockup",
     "ksy"
 ]
+editable-backend = "editables"
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "black==22.3.0",
     "coverage-badge>=1.1.0",
     "docstr-coverage>=2.2.0",
     "ipython~=7.23.1",
     "pre-commit",
     "snakeviz>=2.1.2",
 ]
+maintain = [
+    "black==22.3.0",
+    "blacken-docs==1.12.1",
+    "git-changelog>=1.0",
+]
+quality = [
+    "mypy>=1.2.0",
+    "ruff>=0.0.246",
+]
 doc = [
     "pdoc3~=0.10.0",
-    "pylint~=2.15.3",
 ]
 test = [
     "pytest~=7.1.3",

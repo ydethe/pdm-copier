@@ -17,19 +17,23 @@ To run tests, just run:
 
 [See coverage](../coverage/index.html)
 
+.. include:: ../CHANGELOG.md
+
 """
 import os
 import logging
 
 from rich.logging import RichHandler
+from setuptools_scm import get_version  # type: ignore
 
 
 # création de l'objet logger qui va nous servir à écrire dans les logs
-logger = logging.getLogger(f"{{python_package_import_name}}_logger")
+logger = logging.getLogger("{{python_package_import_name}}_logger")
 logger.setLevel(os.environ.get("LOGLEVEL", "INFO").upper())
 
 stream_handler = RichHandler()
 logger.addHandler(stream_handler)
+
 
 def get_{{python_package_import_name}}_version() -> str:
     """Get the current version of the software:
@@ -45,8 +49,7 @@ def get_{{python_package_import_name}}_version() -> str:
     try:
         # Production mode
         version = im.version("{{python_package_import_name}}")
-    except BaseException as e:  # pragma: no cover
-        from setuptools_scm import get_version
+    except BaseException:  # pragma: no cover
         version = f"{get_version()} (dev)"
-        
+
     return version

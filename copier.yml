@@ -36,6 +36,11 @@ author_email:
     help: What is the email of the author?
     default: yann@johncloud.fr
 
+min_python_version:
+    type: str
+    help: What is the minimum python version?
+    default: 3.8
+
 repository_provider:
   type: str
   help: Your repository provider

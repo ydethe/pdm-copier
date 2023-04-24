@@ -27,13 +27,13 @@ from rich.logging import RichHandler
 
 
 # création de l'objet logger qui va nous servir à écrire dans les logs
-logger = logging.getLogger(f"{{project_name}}_logger")
+logger = logging.getLogger(f"{{python_package_import_name}}_logger")
 logger.setLevel(os.environ.get("LOGLEVEL", "INFO").upper())
 
 stream_handler = RichHandler()
 logger.addHandler(stream_handler)
 
-def get_{{project_name}}_version() -> str:
+def get_{{python_package_import_name}}_version() -> str:
     """Get the current version of the software:
 
     For example: '1.0.0'
@@ -46,7 +46,7 @@ def get_{{project_name}}_version() -> str:
 
     try:
         # Production mode
-        version = im.version("{{project_name}}")
+        version = im.version("{{python_package_import_name}}")
     except BaseException as e:
         # Development mode
         from setuptools_scm import get_version

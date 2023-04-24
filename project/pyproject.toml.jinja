@@ -16,9 +16,9 @@ dependencies = [
 requires-python = ">=3.8,<3.12"
 
 [project.urls]
-"Bug Tracker" = "https://git:8443/projects/{{project_key}}/repos/{{project_name}}/browse/issues"
-Homepage = "https://git:8443/projects/{{project_key}}/repos/{{project_name}}/browse"
-Source = "https://git:8443/projects/{{project_key}}/repos/{{project_name}}/browse"
+"Bug Tracker" = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_namespace }}/issues"
+Homepage = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_namespace }}"
+Source = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_namespace }}"
 
 [tool.pylint.main]
 ignore-patterns = ["kt_*.py"]
@@ -89,9 +89,9 @@ test = [
 [tool.pdm.scripts]
 site_packages = true
 doc.shell = """\
-    mkdir -p build/htmldoc/{{project_name}}
-    pdoc --html --force --config latex_math=True -o build/htmldoc {{project_name}}
+    mkdir -p build/htmldoc/{{python_package_import_name}}
+    pdoc --html --force --config latex_math=True -o build/htmldoc {{python_package_import_name}}
     coverage html -d build/htmldoc/coverage --rcfile tests/coverage.conf
-    docstr-coverage {{project_name}} -miP -sp -is -idel --skip-file-doc --exclude ".*/kt.*.py" --badge=build/htmldoc/doc_badge.svg
+    docstr-coverage {{python_package_import_name}} -miP -sp -is -idel --skip-file-doc --exclude ".*/kt.*.py" --badge=build/htmldoc/doc_badge.svg
     coverage-badge -f -o build/htmldoc/cov_badge.svg
 """

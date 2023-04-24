@@ -1,8 +1,17 @@
+# Configuration
+_subdirectory: project
+_skip_if_exists:
+- CHANGELOG.md
+- CREDITS.md
+# _tasks:
+#     # Strings get executed under system's default shell
+#     - "git init"
+
 # questions
 project_name:
     type: str
     help: What is your project name?
-    placeholder: Slug of the project, e.g. my_library
+    placeholder: Name of the project, e.g. 'My library'
 
 project_description:
     type: str
@@ -12,19 +21,72 @@ project_description:
 author_name:
     type: str
     help: What is the full name of the author?
-    default: Yann BLAUDIN DE THE
+    default: Yann de Thé
 
 author_email:
     type: str
     help: What is the email of the author?
-    default: yann.blaudin-de-the@thalesaleniaspace.com
+    default: yann@johncloud.fr
 
-project_key:
-    type: str
-    help: What is the key of the project on bitbucket?
-    default: DNFSND
-    
-_tasks:
-    # Strings get executed under system's default shell
-    - "git init"
-    
+author_username:
+  type: str
+  help: Your username (e.g. on Gitlab)
+
+repository_provider:
+  type: str
+  help: Your repository provider
+  default: gitlab.com
+
+repository_namespace:
+  type: str
+  help: Your repository namespace
+  default: "{{ author_username }}"
+
+repository_name:
+  type: str
+  help: Your repository name (also for `pip install NAME`)
+  default: "{{ project_name|lower|replace('_', '-')|replace(' ', '-') }}"
+
+python_package_import_name:
+  type: str
+  help: Your Python package import name (for `import NAME` in Python code)
+  default: "[[ project_name|lower|replace('-', '_')|replace(' ', '_') ]]"
+
+copyright_license:
+  type: str
+  help: Your project's license
+  default: ISC License
+  choices:
+  - Academic Free License v3.0
+  - Apache License 2.0
+  - Artistic License 2.0
+  - BSD 2-Clause "Simplified" License
+  - BSD 3-Clause Clear License
+  - BSD 3-Clause "New" or "Revised" License
+  - Boost Software License 1.0
+  - Creative Commons Attribution 4.0
+  - Creative Commons Attribution Share Alike 4.0
+  - Creative Commons Zero v1.0 Universal
+  - Do What The F*ck You Want To Public License
+  - Educational Community License v2.0
+  - Eclipse Public License 1.0
+  - Eclipse Public License 2.0
+  - European Union Public License 1.1
+  - European Union Public License 1.2
+  - GNU Affero General Public License v3.0
+  - GNU General Public License v2.0
+  - GNU General Public License v3.0
+  - GNU Lesser General Public License v2.1
+  - GNU Lesser General Public License v3.0
+  - ISC License
+  - LaTeX Project Public License v1.3c
+  - MIT License
+  - Mozilla Public License 2.0
+  - Microsoft Public License
+  - Microsoft Reciprocal License
+  - University of Illinois/NCSA Open Source License
+  - SIL Open Font License 1.1
+  - Open Software License 3.0
+  - PostgreSQL License
+  - The Unlicense
+  - zlib License

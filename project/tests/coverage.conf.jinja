@@ -1,7 +1,7 @@
 # .coveragerc to control coverage.py
 [run]
 branch = True
-source = {{project_name}}
+source = {{python_package_import_name}}
 omit =
     */kt_*.py
     */_ksy_builder.py
@@ -9,7 +9,7 @@ omit =
 
 [paths]
 source =
-    {{project_name}}/
+    {{python_package_import_name}}/
 
 [report]
 # Regexes for lines to exclude from consideration

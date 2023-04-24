@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+"""
+
+.. include:: ../README.md
+
+# Testing
+
+## Run the tests
+
+To run tests, just run:
+
+    pdm run pytest
+
+## Test reports
+
+[See test report](../tests/report.html)
+
+[See test results](../tests/results/fig_comparison.html)
+
+[See coverage](../coverage/index.html)
+
+"""
+import os
+import logging
+
+from rich.logging import RichHandler
+
+
+# création de l'objet logger qui va nous servir à écrire dans les logs
+logger = logging.getLogger(f"{{project_name}}_logger")
+logger.setLevel(os.environ.get("LOGLEVEL", "INFO").upper())
+
+stream_handler = RichHandler()
+logger.addHandler(stream_handler)
+
+def get_{{project_name}}_version() -> str:
+    """Get the current version of the software:
+
+    For example: '1.0.0'
+
+    Returns:
+        The version string
+
+    """
+    import importlib.metadata as im
+
+    try:
+        # Production mode
+        version = im.version("{{project_name}}")
+    except BaseException as e:
+        # Development mode
+        from setuptools_scm import get_version
+
+        version = f"{get_version()} (dev)"
+    return version

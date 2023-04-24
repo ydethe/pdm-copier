@@ -1,0 +1,22 @@
+repos:
+# Some "common" checks useful for almost any repo
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.1.0
+  hooks:
+    #- id: check-added-large-files
+  - id: check-case-conflict
+  - id: check-merge-conflict
+  - id: check-symlinks
+  - id: check-yaml
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+  - id: trailing-whitespace
+
+# Automatically format Python code
+- repo: https://github.com/psf/black
+  rev: 22.3.0
+  hooks:
+  - id: black
+    additional_dependencies: ['click==8.0.4']
+    args: ['-l', '100','--force-exclude','kt_.*.py']

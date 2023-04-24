@@ -1,0 +1,30 @@
+# questions
+project_name:
+    type: str
+    help: What is your project name?
+    placeholder: Slug of the project, e.g. my_library
+
+project_description:
+    type: str
+    help: What is your project goal?
+    placeholder: A one-line description of the package
+
+author_name:
+    type: str
+    help: What is the full name of the author?
+    default: Yann BLAUDIN DE THE
+
+author_email:
+    type: str
+    help: What is the email of the author?
+    default: yann.blaudin-de-the@thalesaleniaspace.com
+
+project_key:
+    type: str
+    help: What is the key of the project on bitbucket?
+    default: DNFSND
+    
+_tasks:
+    # Strings get executed under system's default shell
+    - "git init"
+    

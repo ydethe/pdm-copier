@@ -15,8 +15,6 @@ To run tests, just run:
 
 [See test report](../tests/report.html)
 
-[See test results](../tests/results/fig_comparison.html)
-
 [See coverage](../coverage/index.html)
 
 """
@@ -47,9 +45,8 @@ def get_{{python_package_import_name}}_version() -> str:
     try:
         # Production mode
         version = im.version("{{python_package_import_name}}")
-    except BaseException as e:
-        # Development mode
+    except BaseException as e:  # pragma: no cover
         from setuptools_scm import get_version
-
         version = f"{get_version()} (dev)"
+        
     return version

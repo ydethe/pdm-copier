@@ -3,9 +3,14 @@ _subdirectory: project
 _skip_if_exists:
 - CHANGELOG.md
 - CREDITS.md
-# _tasks:
-#     # Strings get executed under system's default shell
-#     - "git init"
+_tasks:
+    # Strings get executed under system's default shell
+    - "git init"
+    - "pdm venv create"
+    - "pdm use --venv in-project"
+    - "pdm install"
+    - ".venv/bin/pre-commit install"
+    - "git add --all"
 
 # questions
 project_name:
@@ -28,10 +33,6 @@ author_email:
     help: What is the email of the author?
     default: yann@johncloud.fr
 
-author_username:
-  type: str
-  help: Your username (e.g. on Gitlab)
-
 repository_provider:
   type: str
   help: Your repository provider
@@ -40,7 +41,6 @@ repository_provider:
 repository_namespace:
   type: str
   help: Your repository namespace
-  default: "{{ author_username }}"
 
 repository_name:
   type: str
@@ -50,12 +50,12 @@ repository_name:
 python_package_import_name:
   type: str
   help: Your Python package import name (for `import NAME` in Python code)
-  default: "[[ project_name|lower|replace('-', '_')|replace(' ', '_') ]]"
+  default: "{{ project_name|lower|replace('-', '_')|replace(' ', '_') }}"
 
 copyright_license:
   type: str
   help: Your project's license
-  default: ISC License
+  default: MIT License
   choices:
   - Academic Free License v3.0
   - Apache License 2.0

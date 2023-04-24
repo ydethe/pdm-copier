@@ -3,7 +3,7 @@ requires = ["pdm-backend~=2.0.6"]
 build-backend = "pdm.backend"
 
 [project]
-name = "{{project_name}}"
+name = "{{repository_name}}"
 dynamic = ["version"]
 description = "{{project_description}}"
 authors = [
@@ -38,7 +38,7 @@ addopts = [
     "--self-contained-html",
     "--junitxml=build/junit.xml",
     "--cov-config=tests/coverage.conf",
-    "--cov={{project_name}}",
+    "--cov={{python_package_import_name}}",
     "--doctest-modules",
 ]
 testpaths = [
@@ -50,7 +50,7 @@ source = "scm"
 
 [tool.pdm.build]
 includes = [
-    "{{project_name}}/",
+    "{{python_package_import_name}}/",
 ]
 excludes = [
     "tests",
@@ -68,7 +68,6 @@ dev = [
     "coverage-badge>=1.1.0",
     "docstr-coverage>=2.2.0",
     "ipython~=7.23.1",
-    "pep263",
     "pre-commit",
     "snakeviz>=2.1.2",
 ]

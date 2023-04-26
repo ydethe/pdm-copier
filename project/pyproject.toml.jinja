@@ -16,9 +16,9 @@ dependencies = [
 requires-python = ">{{min_python_version}}"
 
 [project.urls]
-"Bug Tracker" = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_namespace }}/issues"
-Homepage = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_namespace }}"
-Source = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_namespace }}"
+"Bug Tracker" = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_name }}/issues"
+Homepage = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_name }}"
+Source = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_name }}"
 
 [tool.pylint.main]
 ignore-patterns = ["kt_*.py"]
@@ -29,6 +29,16 @@ max-line-length = 100
 [tool.black]
 line-length = 100
 force-exclude = 'kt_.*.py'
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.per-file-ignores]
+"kt_sbf.py" = ["E501"]
+"kt_wg3_header.py" = ["E501"]
+"kt_wg3.py" = ["E501"]
+"kt_kass_edd.py" = ["E501"]
+"kt_egnos_edd.py" = ["E501"]
 
 [tool.pytest.ini_options]
 addopts = [

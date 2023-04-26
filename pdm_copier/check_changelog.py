@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
         f.write(txt)
 
 
-def main(args: list[str] | None = None) -> int:
+def main(args: List[str]  = None) -> int:
     """Check if CHANGELOG.md is up to dat with the last commits/tags.
     If not, updates it and interrupts commit
 

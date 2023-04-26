@@ -3,7 +3,7 @@ requires = ["pdm-backend~=2.0.6"]
 build-backend = "pdm.backend"
 
 [project]
-name = "pdm-copier"
+name = "pdm_copier"
 dynamic = ["version"]
 description = "A python project template"
 authors = [
@@ -45,7 +45,7 @@ addopts = [
     "--self-contained-html",
     "--junitxml=htmldoc/junit.xml",
     "--cov-config=tests/coverage.conf",
-    "--cov=pdm-copier",
+    "--cov=pdm_copier",
     "--doctest-modules",
 ]
 testpaths = [
@@ -57,7 +57,7 @@ source = "scm"
 
 [tool.pdm.build]
 includes = [
-    "pdm-copier/",
+    "pdm_copier/",
 ]
 excludes = [
     "tests",
@@ -103,9 +103,9 @@ test = [
 [tool.pdm.scripts]
 site_packages = true
 doc.shell = """\
-    mkdir -p htmldoc/pdm-copier
-    pdoc --html --force --config latex_math=True -o htmldoc pdm-copier
+    mkdir -p htmldoc/pdm_copier
+    pdoc --html --force --config latex_math=True -o htmldoc pdm_copier
     coverage html -d htmldoc/coverage --rcfile tests/coverage.conf
-    docstr-coverage pdm-copier -miP -sp -is -idel --skip-file-doc --exclude ".*/kt.*.py" --badge=htmldoc/doc_badge.svg
+    docstr-coverage pdm_copier -miP -sp -is -idel --skip-file-doc --exclude ".*/kt.*.py" --badge=htmldoc/doc_badge.svg
     coverage-badge -f -o htmldoc/cov_badge.svg
 """

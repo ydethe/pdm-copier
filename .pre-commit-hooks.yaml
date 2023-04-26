@@ -1,7 +1,7 @@
 # .pre-commit-hooks.yaml
-- id: update-changelog
+- id: check-changelog
   name: update changelog
   description: update CHANGELOG.md file
-  entry: update-changelog
+  entry: check-changelog
   language: python
   

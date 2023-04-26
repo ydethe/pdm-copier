@@ -41,6 +41,8 @@ def main(args: List[str] = None) -> int:
         for option_string in action.option_strings:
             parser._option_string_actions.pop(option_string, None)
 
+    parser.add_argument('filenames', nargs='*')
+        
     opts = parser.parse_args(args=args)
 
     changelog_path = Path("CHANGELOG.md")

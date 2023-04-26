@@ -30,7 +30,7 @@ line-length = 100
 force-exclude = 'kt_.*.py'
 
 [project.scripts]
-update-changelog = "pre_commit_hooks.update_changelog:main"
+check_changelog = "pdm_copier.check_changelog:main"
 
 [tool.ruff]
 line-length = 100

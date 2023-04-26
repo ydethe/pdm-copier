@@ -3,4 +3,5 @@
   name: update changelog
   description: update CHANGELOG.md file
   entry: update-changelog
+  language: python
   

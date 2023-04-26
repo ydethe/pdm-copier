@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
+## [v0.4.0](https://gitlab.com/ydethe/pdm-copier/tags/v0.4.0) - 2023-04-26
+
+<small>[Compare with v0.3.1](https://gitlab.com/ydethe/pdm-copier/compare/v0.3.1...v0.4.0)</small>
+
+### Added
+
+- Added stub arguments for filenames list ([f9bf237](https://gitlab.com/ydethe/pdm-copier/commit/f9bf237c272ded5ff8b4fcbf23bfc508aa0ad9bf) by Yann BLAUDIN DE THE).
+
 ## [v0.3.1](https://gitlab.com/ydethe/pdm-copier/tags/v0.3.1) - 2023-04-26
 
 <small>[Compare with v0.3.0](https://gitlab.com/ydethe/pdm-copier/compare/v0.3.0...v0.3.1)</small>

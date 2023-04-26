@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
+## [v0.2.2](https://gitlab.com/ydethe/pdm-copier/tags/v0.2.2) - 2023-04-26
+
+<small>[Compare with v0.2.1](https://gitlab.com/ydethe/pdm-copier/compare/v0.2.1...v0.2.2)</small>
+
+### Fixed
+
+- Fixed CHANGELOG hook name : check-changelog ([fe71c64](https://gitlab.com/ydethe/pdm-copier/commit/fe71c64a121d050dd57b935366b38749b9d4a4c1) by Yann BLAUDIN DE THE).
+
 ## [v0.2.1](https://gitlab.com/ydethe/pdm-copier/tags/v0.2.1) - 2023-04-26
 
 <small>[Compare with v0.2.0](https://gitlab.com/ydethe/pdm-copier/compare/v0.2.0...v0.2.1)</small>

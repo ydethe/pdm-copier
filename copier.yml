@@ -3,6 +3,10 @@ _subdirectory: project
 _skip_if_exists:
 - CHANGELOG.md
 - CREDITS.md
+- README.md
+- .gitignore
+- pyproject.toml
+- .gitlab-ci.yml
 _conflict: rej
 _tasks:
     - ["{{ _copier_python }}", "{{ _copier_conf.src_path }}/task.py"]

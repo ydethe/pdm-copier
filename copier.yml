@@ -10,7 +10,7 @@ _skip_if_exists:
 _conflict: rej
 _tasks:
     - ["{{ _copier_python }}", "{{ _copier_conf.src_path }}/task.py"]
-    
+
 # Questions
 project_name:
     type: str

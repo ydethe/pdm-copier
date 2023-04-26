@@ -4,4 +4,3 @@
   description: check and update CHANGELOG.md file
   entry: check-changelog
   language: python
-  

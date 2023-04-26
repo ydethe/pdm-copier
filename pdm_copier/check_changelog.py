@@ -30,6 +30,7 @@ def main(args: List[str] = None) -> int:
 
     """
     parser = get_parser()
+    parser.add_argument('filenames', nargs='*')
     to_remove: List[Action] = []
     name_to_remove = ["repository", "output", "version", "help"]
     for action in parser._actions:

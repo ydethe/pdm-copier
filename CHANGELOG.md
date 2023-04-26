@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
+## [v0.4.0](https://gitlab.com/ydethe/pdm-copier/tags/v0.4.0) - 2023-04-26
+
+<small>[Compare with v0.3.1](https://gitlab.com/ydethe/pdm-copier/compare/v0.3.1...v0.4.0)</small>
+
+### Added
+
+- Added files in _skip_if_exists list (copier.yml) ([05a9b46](https://gitlab.com/ydethe/pdm-copier/commit/05a9b467f19f47761bf2c13e3c2fc357f2dfdaa9) by YANN BLAUDIN DE THE).
+- Added pdm-copier hooks in template ([fa1d2b5](https://gitlab.com/ydethe/pdm-copier/commit/fa1d2b57add6ef0a5ccd31541d560cdd98f3fb71) by YANN BLAUDIN DE THE).
+
+### Fixed
+
+- Fixed py38 compatibility ([597e0eb](https://gitlab.com/ydethe/pdm-copier/commit/597e0eb68817d14e19b5b909387597eb1de2bc66) by Yann de Thé).
+
 ## [v0.3.1](https://gitlab.com/ydethe/pdm-copier/tags/v0.3.1) - 2023-04-26
 
 <small>[Compare with v0.3.0](https://gitlab.com/ydethe/pdm-copier/compare/v0.3.0...v0.3.1)</small>

@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
+## [v0.4.2](https://gitlab.com/ydethe/pdm-copier/tags/v0.4.2) - 2023-04-26
+
+<small>[Compare with v0.4.1](https://gitlab.com/ydethe/pdm-copier/compare/v0.4.1...v0.4.2)</small>
+
 ## [v0.4.1](https://gitlab.com/ydethe/pdm-copier/tags/v0.4.1) - 2023-04-26
 
 <small>[Compare with v0.3.1](https://gitlab.com/ydethe/pdm-copier/compare/v0.3.1...v0.4.1)</small>

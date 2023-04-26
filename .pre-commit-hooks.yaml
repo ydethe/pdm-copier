@@ -1,0 +1,6 @@
+# .pre-commit-hooks.yaml
+- id: update-changelog
+  name: update changelog
+  description: update CHANGELOG.md file
+  entry: update-changelog
+  

@@ -6,9 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
-## [v0.2.3](https://gitlab.com/ydethe/pdm-copier/tags/v0.2.3) - 2023-04-26
+## [v0.3.0](https://gitlab.com/ydethe/pdm-copier/tags/v0.3.0) - 2023-04-26
 
-<small>[Compare with v0.2.2](https://gitlab.com/ydethe/pdm-copier/compare/v0.2.2...v0.2.3)</small>
+<small>[Compare with v0.2.2](https://gitlab.com/ydethe/pdm-copier/compare/v0.2.2...v0.3.0)</small>
+
+### Added
+
+- Added pre-commit hooks in pdm-copier ([0a997ff](https://gitlab.com/ydethe/pdm-copier/commit/0a997ff12d28d4420cea4bea7bc55fc74d1c18b1) by Yann BLAUDIN DE THE).
 
 ### Fixed
 

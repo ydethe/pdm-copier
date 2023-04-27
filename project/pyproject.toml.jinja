@@ -43,9 +43,9 @@ line-length = 100
 [tool.pytest.ini_options]
 addopts = [
     "--import-mode=importlib",
-    "--html=build/htmldoc/tests/report.html",
+    "--html=htmldoc/tests/report.html",
     "--self-contained-html",
-    "--junitxml=build/junit.xml",
+    "--junitxml=htmldoc/junit.xml",
     "--cov-config=tests/coverage.conf",
     "--cov={{python_package_import_name}}",
     "--doctest-modules",
@@ -105,9 +105,9 @@ test = [
 [tool.pdm.scripts]
 site_packages = true
 doc.shell = """\
-    mkdir -p build/htmldoc/{{python_package_import_name}}
-    pdoc --html --force --config latex_math=True -o build/htmldoc {{python_package_import_name}}
-    coverage html -d build/htmldoc/coverage --rcfile tests/coverage.conf
-    docstr-coverage {{python_package_import_name}} -miP -sp -is -idel --skip-file-doc --exclude ".*/kt.*.py" --badge=build/htmldoc/doc_badge.svg
-    coverage-badge -f -o build/htmldoc/cov_badge.svg
+    mkdir -p htmldoc/{{python_package_import_name}}
+    pdoc --html --force --config latex_math=True -o htmldoc {{python_package_import_name}}
+    coverage html -d htmldoc/coverage --rcfile tests/coverage.conf
+    docstr-coverage {{python_package_import_name}} -miP -sp -is -idel --skip-file-doc --exclude ".*/kt.*.py" --badge=htmldoc/{{python_package_import_name}}/doc_badge.svg
+    coverage-badge -f -o htmldoc/{{python_package_import_name}}/cov_badge.svg
 """

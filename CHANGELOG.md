@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added link to pdm review ([c18dcff](https://gitlab.com/ydethe/pdm-copier/commit/c18dcfff48d65ab474758fb7942d6fdd21373c7f) by Yann BLAUDIN DE THE).
 - Added stub arguments for filenames list ([9b25ba3](https://gitlab.com/ydethe/pdm-copier/commit/9b25ba3cdbfb68091b89463049914e8ce93cd4d2) by Yann BLAUDIN DE THE).
 
+### Fixed
+
+- Fixed hooks ([5a38f0d](https://gitlab.com/ydethe/pdm-copier/commit/5a38f0d74f52e95efce9e675dab1fdb0407d64b5) by Yann BLAUDIN DE THE).
+
 ## [v0.4.1](https://gitlab.com/ydethe/pdm-copier/tags/v0.4.1) - 2023-04-26
 
 <small>[Compare with v0.3.1](https://gitlab.com/ydethe/pdm-copier/compare/v0.3.1...v0.4.1)</small>

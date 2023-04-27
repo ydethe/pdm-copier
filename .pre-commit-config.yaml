@@ -3,12 +3,11 @@ repos:
   - id: check-changelog
     args: [--version-regex, '<a href="[^"]+">(?P<version>[^<]+)', --bump-latest]
   repo: https://gitlab.com/ydethe/pdm-copier.git
-  rev: v0.4.0
+  rev: v0.5.0
 
 - hooks:
   - id: check-case-conflict
   - id: check-merge-conflict
-  - id: check-yaml
   - id: mixed-line-ending
   - id: trailing-whitespace
   repo: https://github.com/pre-commit/pre-commit-hooks

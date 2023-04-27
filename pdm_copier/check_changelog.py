@@ -30,7 +30,7 @@ def main(args: List[str] = None) -> int:
 
     """
     parser = get_parser()
-    parser.add_argument('filenames', nargs='*')
+    parser.add_argument("filenames", nargs="*")
     to_remove: List[Action] = []
     name_to_remove = ["repository", "output", "version", "help"]
     for action in parser._actions:
@@ -42,8 +42,8 @@ def main(args: List[str] = None) -> int:
         for option_string in action.option_strings:
             parser._option_string_actions.pop(option_string, None)
 
-    parser.add_argument('filenames', nargs='*')
-        
+    parser.add_argument("filenames", nargs="*")
+
     opts = parser.parse_args(args=args)
 
     changelog_path = Path("CHANGELOG.md")

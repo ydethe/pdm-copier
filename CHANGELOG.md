@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Fixed hooks ([5a38f0d](https://gitlab.com/ydethe/pdm-copier/commit/5a38f0d74f52e95efce9e675dab1fdb0407d64b5) by Yann BLAUDIN DE THE).
+- Fixed hooks ([11da128](https://gitlab.com/ydethe/pdm-copier/commit/11da128bb7d73f40e8d1301a57141318b6d84730) by Yann BLAUDIN DE THE).
 
 ## [v0.4.1](https://gitlab.com/ydethe/pdm-copier/tags/v0.4.1) - 2023-04-26
 

@@ -46,7 +46,6 @@ repos:
     rev: v0.0.261
     hooks:
       - id: ruff
-<<<<<<< HEAD
         args: [--fix, --exit-non-zero-on-fix, --config, "pyproject.toml"]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
@@ -55,6 +54,3 @@ repos:
       - id: mypy
         exclude: ^tests/
         args: [--strict]
-=======
-        args: [--fix, --exit-non-zero-on-fix]
->>>>>>> 4e67155e4854685e2c381b79402a322e1a932ff1

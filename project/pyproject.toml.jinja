@@ -1,5 +1,12 @@
 [build-system]
-requires = ["pdm-backend~=2.0.6"]
+requires = [
+    "pdm-backend>=2.1.0,<3.0.0",
+    "setuptools>=67.0.0,<69.0.0",
+    "pybind11>=2.10.4,<3.0.0",
+    "nuitka",
+    "wheel",
+    "toml"
+]
 build-backend = "pdm.backend"
 
 [project]
@@ -14,6 +21,7 @@ dependencies = [
     "setuptools-scm>=7.1",
 ]
 requires-python = ">={{min_python_version}}"
+readme = "README.md"
 
 [project.urls]
 "Bug Tracker" = "https://{{ repository_provider }}/{{ repository_namespace }}/{{ repository_name }}/issues"
@@ -63,6 +71,7 @@ testpaths = [
 source = "scm"
 
 [tool.pdm.build]
+run-setuptools = true
 includes = [
     "{{python_package_import_name}}/",
 ]
@@ -74,6 +83,11 @@ excludes = [
     "dist",
     "mockup",
     "ksy"
+]
+source-includes = [
+    "**/*.c",
+    "**/*.cpp",
+    "**/*.py"
 ]
 editable-backend = "editables"
 
@@ -96,6 +110,7 @@ quality = [
 ]
 doc = [
     "pdoc3~=0.10.0",
+    "pylint>=2.15.3",
 ]
 test = [
     "pytest~=7.1.3",

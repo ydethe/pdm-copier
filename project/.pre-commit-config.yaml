@@ -1,5 +1,11 @@
 repos:
-  - repo: local
+- hooks:
+  - id: check-changelog
+    args: [--version-regex, '<a href="[^"]+">(?P<version>[^<]+)', --bump-latest]
+  repo: https://gitlab.com/ydethe/pdm-copier.git
+  rev: v0.5.0
+
+- repo: local
     hooks:
       # Prevent committing .rej files
       - id: forbidden-files
@@ -15,10 +21,6 @@ repos:
       #- id: check-added-large-files
       - id: check-case-conflict
       - id: check-merge-conflict
-      - id: check-symlinks
-      - id: check-yaml
-      - id: debug-statements
-      - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
 
@@ -44,6 +46,7 @@ repos:
     rev: v0.0.261
     hooks:
       - id: ruff
+<<<<<<< HEAD
         args: [--fix, --exit-non-zero-on-fix, --config, "pyproject.toml"]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
@@ -52,3 +55,6 @@ repos:
       - id: mypy
         exclude: ^tests/
         args: [--strict]
+=======
+        args: [--fix, --exit-non-zero-on-fix]
+>>>>>>> 4e67155e4854685e2c381b79402a322e1a932ff1

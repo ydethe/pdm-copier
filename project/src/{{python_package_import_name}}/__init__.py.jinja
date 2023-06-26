@@ -35,23 +35,3 @@ logger.setLevel(os.environ.get("LOGLEVEL", "INFO").upper())
 
 stream_handler = RichHandler()
 logger.addHandler(stream_handler)
-
-
-def get_{{python_package_import_name}}_version() -> str:
-    """Get the current version of the software:
-
-    For example: '1.0.0'
-
-    Returns:
-        The version string
-
-    """
-    import importlib.metadata as im
-
-    try:
-        # Production mode
-        version = im.version("{{python_package_import_name}}")
-    except BaseException:  # pragma: no cover
-        version = f"{get_version()} (dev)"
-
-    return version

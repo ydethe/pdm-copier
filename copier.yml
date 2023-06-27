@@ -42,6 +42,11 @@ use_pytest_mpl:
     default: false
     help: Do you want to use pytest_mpl?
 
+use_c_extension:
+    type: bool
+    default: false
+    help: Do you want to activate C extension?
+
 repository_provider:
   type: str
   help: Your repository provider

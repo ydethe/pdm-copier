@@ -1,11 +1,13 @@
 [build-system]
 requires = [
     "pdm-backend>=2.1.0,<3.0.0",
+{% if use_c_extension %}
     "setuptools>=67.0.0,<69.0.0",
     "pybind11>=2.10.4,<3.0.0",
     "nuitka",
     "wheel",
-    "toml"
+    "toml",
+{% endif %}
 ]
 build-backend = "pdm.backend"
 
@@ -72,7 +74,7 @@ testpaths = [
 source = "scm"
 
 [tool.pdm.build]
-run-setuptools = true
+{% if use_c_extension %}run-setuptools = true{% endif %}
 includes = [
     "{{python_package_import_name}}/",
 ]
